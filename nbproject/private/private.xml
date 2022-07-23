@@ -3,18 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/src/java/manhcuong/request/requestDAO.java</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/web/myprofile.jsp</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/web/devicePage.jsp</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/src/java/duonght/dto/Account.java</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/web/AdminPage.jsp</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/web/approvedrequeststaff.jsp</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/web/cancelrequeststaff.jsp</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/src/java/duonght/LoginGoogle/LoginHandler.java</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/src/java/duonght/controller/LoginController.java</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/src/java/duonght/dao/AccountDao.java</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/src/java/quanghung/controller/MainController.java</file>
-            <file>file:/D:/Summer2022-Kỳ%205/SWP/MiniProject-DeviceRentingSystem/web/RequestManagerHeader.jsp</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/web/requeststaff.jsp</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/src/java/quanghung/controller/UpdateRequestController.java</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/web/approvedrequeststaff.jsp</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/web/cancelrequeststaff.jsp</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/src/java/quanghung/controller/LoadAllRequestManagement.java</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/src/java/manhcuong/request/requestDAO.java</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/src/java/quanghung/controller/UpdateCartController.java</file>
+            <file>file:/D:/study/SWP/ITDeviceSystem/web/successfulrequeststaff.jsp</file>
         </group>
     </open-files>
 </project-private>

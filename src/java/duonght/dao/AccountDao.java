@@ -57,7 +57,7 @@ public class AccountDao {
         try {
             cn = DBUtils.getConnection();
             if (cn != null) {
-                String url = "SELECT userID, userName, mail, phone, position, deposit, roleID, status "
+                String url = "SELECT userID, userName, mail, phone, position, roleID, status "
                         + "FROM Accounts "
                         + "WHERE mail = ?";
                 pst = cn.prepareStatement(url);
@@ -70,7 +70,7 @@ public class AccountDao {
                     String phone = rs.getString("phone");
                     String position = rs.getString("position");
                     String roleID = rs.getString("roleID");
-                    int deposit = rs.getInt("deposit");
+                    int deposit = 0;
                     int status = rs.getInt("status");
                     acc = new Account(userID, userName, mail, phone, position, deposit, roleID, status);
                 }
@@ -263,6 +263,39 @@ public class AccountDao {
             e.printStackTrace();
         }
         return false;
+    }
+    public static int updateDeposit(String userID, int deposit) {
+        Connection cn = null;
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        PreparedStatement pst2 = null;
+        int rs2 = 0;
+        boolean check = false;
+        try {
+            cn = DBUtils.getConnection();
+            if (cn != null) {
+                String url = "SELECT deposit FROM Accounts\n"
+                        + "WHERE userID = ?";
+                pst = cn.prepareStatement(url);
+                pst.setString(1, userID);
+                rs = pst.executeQuery();
+                if (rs.next()) {
+                    deposit += rs.getInt("deposit");
+                    String url2 = "UPDATE Accounts SET deposit = ? \n"
+                            + "WHERE userID = ?";
+                    pst2 = cn.prepareStatement(url2);
+                    pst2.setInt(1, deposit);
+                    pst2.setString(2, userID);
+                    rs2 = pst2.executeUpdate();
+                    if (rs2 > 0) {
+                        check = true;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return deposit;
     }
 
 }

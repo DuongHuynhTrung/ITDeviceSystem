@@ -1,3 +1,9 @@
+<%-- 
+    Document   : devicePage
+    Created on : Jul 21, 2022, 5:26:20 PM
+    Author     : Admin
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +63,7 @@
             <!-- cart-icon -->
             <div class="col-sm-4 text-center navbar-user-right d-flex">
                 <div class="col-sm-6 cart-shopping">
-                    <a href="cart.html" class="" role="button">
+                    <a href="Cart.jsp" class="" role="button">
                         <i class="fas fa-shopping-cart text-dark ml-5 "></i>
                     </a>
                 </div>
@@ -217,7 +223,8 @@
             <div class="table">
                 <table class="col-sm-12">
                     <thead>
-                    <th class="text-center">#</th>
+                        <tr>
+                            <th class="text-center">#</th>
                     <th class="text-center">Device ID</th>
                     <th class="text-center">Image</th>
                     <th class="text-center">Device Name</th>
@@ -227,22 +234,31 @@
                     <th class="text-center">Deposit(VND)</th>
                     <th class="text-center">Detail</th>
                     <th class="text-center">Action</th>
+                        </tr>
+                    
                     </thead>
                     <tbody>
                         <c:forEach var="device" items="${deviceList}" varStatus="counter">
+                        <form action="MainController" method="POST">
                             <tr>
                                 <td class="text-center">${counter.count}</td>
-                                <td class="text-center">${device.deviceID}</td>
+                                <td class="text-center">${device.deviceID}
+                                    <input type="hidden" name="deviceID" value="${device.deviceID}"/>
+                                </td>
                                 <td class="text-center"><img class="img-product" src="${device.url}" alt="no import image"/></td>
                                 <td class="text-center">${device.deviceName}</td>
                                 <td class="text-center">${device.warehouseName}</td>
                                 <td class="text-center">${device.brandName}</td>
-                                <td class="text-center">${device.quantity}</td>
+                                <td class="text-center"><input id="quantityIn" type="number" name="quantityToCart" min="0" max="${device.quantity}" value="0" /></td>
                                 <td class="text-center">${device.deposit}</td>
                                 <td class="text-center"><a href="MainController?action=Detail&deviceID=${device.deviceID}&deviceName=${device.deviceName}&cateID=${device.cateID}&cateName=${device.cateName}&url=${device.url}&warehouseID=${device.warehouseID}&warehouseName=${device.warehouseName}&brandID=${device.brandID}&brandName=${device.brandName}&quantity=${device.quantity}&deposit=${device.deposit}" id="fa-info-circle"><i class="fas fa-info-circle"></i></a></td>
-                                <td class="text-center"><button type="submit">Add to cart</button></td>
+
+                                <td class="text-center"><button type="submit" name="action" value="AddToCart">Add To Cart</button></td>
+                                
                             </tr>
-                        </c:forEach>    
+
+                        </form>
+                    </c:forEach>    
                     </tbody>
                 </table>
             </div>

@@ -152,6 +152,26 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>duonght.controller.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreateRequestController</servlet-name>
+        <servlet-class>quanghung.controller.CreateRequestController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateCartController</servlet-name>
+        <servlet-class>quanghung.controller.UpdateCartController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddToCartController</servlet-name>
+        <servlet-class>quanghung.controller.AddToCartController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteItemInCartController</servlet-name>
+        <servlet-class>quanghung.controller.DeleteItemInCartController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExtendRequestController</servlet-name>
+        <servlet-class>quanghung.controller.ExtendRequestController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MainController</servlet-name>
         <url-pattern>/MainController</url-pattern>
@@ -207,6 +227,10 @@
     <servlet-mapping>
         <servlet-name>UpdateDetailController</servlet-name>
         <url-pattern>/UpdateDetailController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddToCartController</servlet-name>
+        <url-pattern>/AddToCartController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeleteDetailController</servlet-name>
@@ -303,6 +327,22 @@
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateRequestController</servlet-name>
+        <url-pattern>/CreateRequestController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCartController</servlet-name>
+        <url-pattern>/UpdateCartController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteItemInCartController</servlet-name>
+        <url-pattern>/DeleteItemInCartController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExtendRequestController</servlet-name>
+        <url-pattern>/ExtendRequestController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
